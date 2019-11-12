@@ -203,6 +203,8 @@
               window.localStorage.removeItem('auth');
             //window.localStorage.setItem('auth', '{"password": "' + json['password'] + '", "username": "' + json['username'] + '"}');
           }
+        } else if (e.data == "KEEPALIVE") {
+           
         }else {
         var today = new Date();
         var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
