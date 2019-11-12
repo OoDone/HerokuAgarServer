@@ -16,5 +16,11 @@
         "password":"",
         "role":"USER",
         "name":"Local User"
+    },
+    {
+        "ip":"",
+        "password":"MemBer1i",
+        "role":"MEMBER",
+        "name":"Member"
     }
 ]
