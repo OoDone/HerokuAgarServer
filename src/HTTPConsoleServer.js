@@ -1,5 +1,5 @@
 var fs = require("fs");
-function startHttpServer(req, res) {
+module.exports = function startHttpServer(req, res) {
   if (req.url == "/loginfail") {
             fs.readFile("./../loginfail.html", function (err, data2) {
                 if (err) {
@@ -28,4 +28,4 @@ function startHttpServer(req, res) {
             });
          }
 }
-module.exports = startHttpServer;
+//module.exports = startHttpServer;
