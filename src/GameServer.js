@@ -225,7 +225,7 @@ GameServer.prototype.onHttpServerOpen = function () {
     // Start Main Loop
     setTimeout(this.timerLoopBind, 1);
 
-    const port2 = process.env.PORT || 5000;
+    const port2 = process.env.PORT || this.config.serverPort;
     // Done
     Logger.info("Listening on port: " + port2);
     global.currentgamemode2 = "Current game mode is " + this.gameMode.name;
@@ -317,17 +317,20 @@ GameServer.prototype.onClientSocketOpen = function (ws, req) {
     ws.packetHandler = new PacketHandler(this, ws);
     var PlayerCommand = require('./modules/PlayerCommand');
     ws.playerCommand = new PlayerCommand(this, ws.playerTracker);
-
     function pingClient() {
         ws.ping();
     }
     function fakeData() {
         ws.send('KEEPALIVE');
     }
+    function keepAlive() {
+        pingClient();
+        fakeData();
+    }
 
     var self = this;
     function setinterval() {
-        setInterval(pingClient, 10000);
+        setInterval(keepAlive, 10000);
     }
     //var keepalive = setInterval(fakeData(), 10000);
     const command = require('./modules/Command');
