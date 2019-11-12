@@ -200,7 +200,7 @@ GameServer.prototype.start = function () {
     // Start the server
      this.httpServer = http.createServer((req, res) => {
          var CServer = require('./HTTPConsoleServer');
-         CServer.startHttpServer(req, res);
+         CServer(req, res);
     })
     var wsOptions = {
         server: this.httpServer,
