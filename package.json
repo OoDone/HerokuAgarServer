@@ -1,9 +1,9 @@
 {
-    "name": "MultiOgar-Edited",
+    "name": "HerokuAgarServ",
     "version": "1.6.2",
-    "description": "Open source multi-protocol Ogar server",
-    "author": "Megabyte918 (https://github.com/Megabyte918)",
-    "homepage": "https://github.com/Megabyte918/MultiOgar-Edited",
+    "description": "Agario server for Heroku from Multiogar-Edited(https://github.com/Megabyte918/multiogar-edited)",
+    "author": "JE5143 and Megabyte918",
+    "homepage": "https://github.com/JE5143/agar",
     "license": "Apache-2.0",
     "main": "src/index.js",
     "dependencies": {
@@ -16,9 +16,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/Megabyte918/MultiOgar-Edited"
+        "url": "https://github.com/JE5143/agar"
     },
     "bugs": {
-        "url": "https://github.com/Megabyte918/MultiOgar-Edited/issues"
+        "url": "https://github.com/JE5143/agar/issues"
     }
 }
