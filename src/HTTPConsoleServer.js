@@ -1,3 +1,4 @@
+var fs = require("fs");
 function startHttpServer(req, res) {
   if (req.url == "/loginfail") {
             fs.readFile("./../loginfail.html", function (err, data2) {
@@ -27,3 +28,4 @@ function startHttpServer(req, res) {
             });
          }
 }
+module.exports = startHttpServer;
