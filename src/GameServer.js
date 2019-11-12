@@ -337,7 +337,12 @@ GameServer.prototype.onClientSocketOpen = function (ws, req) {
     const index = require('./index');
     var int = false;
     ws.on('message', function (message) {
-        setinterval();
+        if (int == false) {
+            setinterval();
+            int = true;
+        } else if (int == true) {
+            
+        }
         var isObject = function(a) {
             return (!!a) && (a.constructor === Object)
         };
