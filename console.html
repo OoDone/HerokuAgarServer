@@ -241,8 +241,12 @@
         alert("Login Failed");
       }
     }
+   function keepAlive() {
+     ws.ping();
+   }
     function interval() {
       setInterval(hitCancel(), 100);
+      setInterval(keepAlive(), 1000);
     }
     ws.onopen = function (event) {
       if (window.localStorage.getItem('auth') != null) {
@@ -253,7 +257,7 @@
       } else {
       user = prompt("Username");
       pass = prompt("Password");
-      setTimeout(xd(), 3000)
+      setTimeout(xd(), 1000)
       interval();
       }
       
