@@ -186,14 +186,17 @@
     //}
     var json;
     var auth;
+    var wsClosed = false;
       
       ws.addEventListener("message", function(e) {
         if (e.data == "CAccepted") {
-          alert("Login Succesful");
-          if (window.localStorage.getItem('auth') == null) {
-          window.localStorage.setItem('auth', '{"password": "' + pass + '", "username": "' + user + '"}');
-          } else {
-            console.log("Autologged in");
+          if (wsClosed == false) {
+            alert("Login Succesful");
+            if (window.localStorage.getItem('auth') == null) {
+            window.localStorage.setItem('auth', '{"password": "' + pass + '", "username": "' + user + '"}');
+            } else {
+              console.log("Autologged in");
+            }
           }
         } else if (e.data == "CDenied") {
           alert("Login Failed");
@@ -225,6 +228,7 @@
         ws.send(jsondata);
       });
       ws.addEventListener("close", function(data) {
+         wsClosed = true;
          window.top.location = window.top.location;
       });
     var user;
