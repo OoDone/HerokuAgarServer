@@ -650,7 +650,7 @@ Commands.list = {
             }
         }
         if (client == null) return void Logger.warn("That player ID is non-existant!");
-            Logger.print("Set base speed of " + getName(client._name) + " to " + speed + ""));
+            Logger.print("Set base speed of " + getName(client._name) + " to " + speed + "");
     },
     merge: function (gameServer, split) {
         // Validation checks
