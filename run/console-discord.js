@@ -9,8 +9,8 @@ var GameMode = require('../src/gamemodes');
 var fs = require('fs');
 
 const config = {
-    role: "owner",
-    token: "NTc2Nzg5NDk1MjI4MTM3NDgz.XNbrLQ.EEMetm8CNazk3SGS2Dsf1ZSKSUw"
+    role: "ROLE",
+    token: "BOT TOKEN"
 };
 
                 function getPos(client) {
