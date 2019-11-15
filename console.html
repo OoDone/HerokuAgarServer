@@ -165,8 +165,6 @@
        })()
 
       var ws = new WebSocket('wss://ffamode.herokuapp.com');
-    //var ws = new ReconnectingWebSocket('ws://ii.hopto.org/');
-    //ws.reconnectInterval = 5000;
       function sendCommand() {
         var data = document.getElementById('console').value;
         ws.send(data);
@@ -197,6 +195,13 @@
             } else {
               console.log("Autologged in");
             }
+          } else if (wsClosed == true) {
+             var today = new Date();
+             var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+             var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+             var dateTime = date+' '+time;
+             var $log = document.getElementById('log');
+             $log.innerHTML = log.innerHTML + '\n' + dateTime + ": " + "Restarted Socket!";
           }
         } else if (e.data == "CDenied") {
           alert("Login Failed");
