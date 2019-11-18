@@ -37,7 +37,7 @@ MotherCell.prototype.onUpdate = function () {
         return;
     }
     var size1 = this._size;
-    var size2 = this.gameServer.config.foodMinSize;
+    var size2 = 100;
     for (var i = 0; i < this.motherCellSpawnAmount; i++) {
         size1 = Math.sqrt(size1 * size1 - size2 * size2);
         size1 = Math.max(size1, this.motherCellMinSize);
