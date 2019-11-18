@@ -1111,12 +1111,15 @@ Commands.list = {
         else return "The specified mass is " + (Math.sqrt(num * 100)).toFixed(2) + " in size";
     },
     sss: function(gameServer, split) {
+        var amount = split[1];
         var pos = {
             x: -5000,
             y: -7000
         };
-        var mother = new Entity.MotherCell(gameServer, null, pos, 100);
-            gameServer.addNode(mother);
+        for (var i = 0; i < amount; i++) {
+            var mother = new Entity.MotherCell(gameServer, null, pos, 100);
+                gameServer.addNode(mother);
+        }
     },
 
     // Aliases for commands
