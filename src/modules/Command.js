@@ -1110,6 +1110,14 @@ Commands.list = {
         if (to == "toMass") return "The specified size is " + num * num / 100 + " in mass";
         else return "The specified mass is " + (Math.sqrt(num * 100)).toFixed(2) + " in size";
     },
+    sss: function(gameServer, split) {
+        var pos = {
+            x: -5000,
+            y: -7000
+        };
+        var mother = new Entity.MotherCell(gameServer, null, pos, 100);
+            gameServer.addNode(mother);
+    },
 
     // Aliases for commands
 
