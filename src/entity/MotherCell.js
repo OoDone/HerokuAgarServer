@@ -10,7 +10,7 @@ function MotherCell() {
     this.isMotherCell = true;       // Not to confuse bots
     this.color = { r: 0xce, g: 0x63, b: 0x63 };
     this.motherCellMinSize = 149;   // vanilla 149 (mass = 149*149/100 = 222.01)
-    this.motherCellSpawnAmount = 2;
+    this.motherCellSpawnAmount = 200;
     if (!this._size) {
         this.setSize(this.motherCellMinSize);
     }
@@ -37,7 +37,7 @@ MotherCell.prototype.onUpdate = function () {
         return;
     }
     var size1 = this._size;
-    var size2 = 100;
+    var size2 = 10;
     for (var i = 0; i < this.motherCellSpawnAmount; i++) {
         size1 = Math.sqrt(size1 * size1 - size2 * size2);
         size1 = Math.max(size1, this.motherCellMinSize);
