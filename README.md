@@ -3,7 +3,7 @@
 This is different from the original multiogar because it has changes to allow easier remote console access and More access on heroku.
 # starting the server
 Since it is ment for heroku the port is going to default to process.env.PORT. So if you don't want that you will have to change it.
-To start the server its just like the normal multiogar, you have to run the command 'npm start'. 
+To start the server its just like the normal multiogar, you have to run the command `npm start`. 
 
 
 
