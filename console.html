@@ -165,7 +165,7 @@
          declare('ansi2html', ansi2html) // ansi2html colors
        })()
       ds = JSON.parse('auth.json');
-      var ws = new WebSocket(ds.host);
+      var ws = new WebSocket(ds.ip);
       function sendCommand() {
         var data = document.getElementById('console').value;
         ws.send(data);
