@@ -13,7 +13,7 @@
     "devDependencies": {},
      "scripts": {
         "start": "cd src && node index.js",
-         "discord": "cd run && node console-discord.js"
+         "discord": "npm i discord.js && cd run && node console-discord.js"
     },
     "repository": {
         "type": "git",
