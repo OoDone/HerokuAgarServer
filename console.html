@@ -5,7 +5,6 @@
 <title>InstantMerge-Console</title>
 </head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="https://raw.githubusercontent.com/JE5143/agar/master/src/auth.json?token=ALPGXBP3O3XK36B7FJF3OGC53VWQQ"></script>
 <body>
 <div style='bottom: 1em;'>
   <style>
@@ -165,7 +164,7 @@
          declare('ansi2html', ansi2html) // ansi2html colors
        })()
       var h2 = window.location.hostname;
-      var ws = new WebSocket('wss://' + hostname);
+      var ws = new WebSocket('wss://' + h2);
       function sendCommand() {
         var data = document.getElementById('console').value;
         ws.send(data);
