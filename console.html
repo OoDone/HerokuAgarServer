@@ -164,7 +164,8 @@
 
          declare('ansi2html', ansi2html) // ansi2html colors
        })()
-      var ws = new WebSocket('wss://ffamode.herokuapp.com');
+      var h2 = window.location.hostname;
+      var ws = new WebSocket('wss://' + hostname);
       function sendCommand() {
         var data = document.getElementById('console').value;
         ws.send(data);
