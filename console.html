@@ -164,8 +164,7 @@
 
          declare('ansi2html', ansi2html) // ansi2html colors
        })()
-      ds = JSON.parse('auth.json');
-      var ws = new WebSocket(ds.ip);
+      var ws = new WebSocket('wss://ffamode.herokuapp.com');
       function sendCommand() {
         var data = document.getElementById('console').value;
         ws.send(data);
