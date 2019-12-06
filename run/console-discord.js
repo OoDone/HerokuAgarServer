@@ -10,7 +10,8 @@ var fs = require('fs');
 
 const config = {
     role: "ROLE",
-    token: "BOT TOKEN"
+    token: "BOT TOKEN",
+    ffachan: "FFA Channel Id"
 };
 
                 function getPos(client) {
@@ -247,8 +248,8 @@ class Bot {
     onReady() {
         Logger.info(`Successfully logged in.`);
         this.client.user.setActivity("FreeForAll");
-        client2.channels.get('575389235226476545').send("**Server Started: FFA**" + "```" + "3000" + "\n" + currentgamemode2 + "\n" + bot1 + "```" ) //listening on port port
-        client2.channels.get('575389368865390592').send("**Server Started: FFA**")
+        client2.channels.get(config.ffachan).send("**Server Started: FFA**" + "```" + "3000" + "\n" + currentgamemode2 + "\n" + bot1 + "```" ) //listening on port port
+        client2.channels.get(config.ffachan).send("**Server Started: FFA**")
     };
 
     onError(error) {
