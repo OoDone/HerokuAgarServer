@@ -57,7 +57,8 @@ BotPlayer.prototype.decide = function (cell) {
                 influence = check._size * 2.5;
             } else if (check._size > cell._size * 1.15) {
                 // Can eat me
-                influence = -check._size;
+                influence = check._size * 2.5;
+                //influence = -check._size;
             } else {
                 influence = -(check._size / cell._size) / 3;
             }
